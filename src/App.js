@@ -7,7 +7,7 @@ function App() {
   return (
     <div data-test="component-app">
       <h1 data-test="counter-display">The Counter is currently<span data-test="count">{count}</span></h1>
-      <button data-test="increment-button">Increment</button>
+      <button onClick={() => setCount(count+1)} data-test="increment-button">Increment</button>
     </div>
   );
 }

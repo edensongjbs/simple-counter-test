@@ -51,5 +51,9 @@ test('counter starts at 0', () => {
 })
 
 test('counter increments by 1 after click', () => {
-
+  const wrapper = setup()
+  const button = findByTestAttr(wrapper, 'increment-button')
+  button.simulate('click')
+  const count = findByTestAttr(wrapper, "count").text()
+  expect(count).toBe('1')
 })
